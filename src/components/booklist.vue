@@ -110,7 +110,7 @@ export default {
     async borrowBook(index) {
       const userId = this.$route.query.userId;
       console.log(userId);
-      //console.log(`Borrowed book: ${this.bookList[index].InventoryId}`);
+      console.log(`Borrowed book: ${this.bookList[index].InventoryId}`);
       const id = this.bookList[index].InventoryId;
       try {
         await axios.put(`http://localhost:8005/library/borrowBook/${userId}/${id}`);
